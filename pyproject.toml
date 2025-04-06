@@ -1,15 +1,15 @@
-[tool.poetry]
+[project]
 name = "five"
 version = "0.0.1"
 description = ""
-authors = ["Dominic Branford"]
+authors = [{ name = "Dominic Branford" }]
+requires-python = ">=3.11"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.12"
-pyyaml = "^6.0.1"
-sqlalchemy = "^2.0.25"
+dependencies = [
+    "pyyaml>=6.0.1,<7",
+    "sqlalchemy>=2.0.25,<3",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
